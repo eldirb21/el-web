@@ -1,14 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-
-const links = [
-  { href: "#about", label: "about" },
-  { href: "#skills", label: "skills" },
-  { href: "#experience", label: "experience" },
-  { href: "#projects", label: "projects" },
-  { href: "#contact", label: "contact" },
-];
+import { appMenu, otherLabel } from "@/lib";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -22,7 +15,7 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
-    const sections = links.map((l) => l.href.replace("#", ""));
+    const sections = appMenu.map((l) => l.href.replace("#", ""));
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
@@ -52,7 +45,7 @@ export default function Navbar() {
         alignItems: "center",
         justifyContent: "space-between",
         transition: "all 0.3s ease",
-        background: scrolled ? "#c8c8c82e" : "transparent",
+        background: scrolled ? "#9810fa19" : "transparent",
         backdropFilter: scrolled ? "blur(20px)" : "none",
         borderBottom: scrolled ? "1px solid rgba(255,255,255,0.05)" : "none",
       }}
@@ -75,13 +68,13 @@ export default function Navbar() {
             color: "var(--text-primary)",
           }}
         >
-          Eldiro
+          {otherLabel.appName}
         </span>
       </a>
 
-      {/* Desktop links */}
+      {/* Desktop appMenu */}
       <div className="hidden md:flex gap-8 items-center">
-        {links.map((l) => (
+        {appMenu.map((l) => (
           <a
             key={l.href}
             href={l.href}
@@ -101,7 +94,7 @@ export default function Navbar() {
           className="btn-primary"
           style={{ padding: "8px 20px", fontSize: "0.78rem" }}
         >
-          Download CV
+          {otherLabel.download}
         </a>
       </div>
 
@@ -127,33 +120,48 @@ export default function Navbar() {
             top: "64px",
             left: 0,
             right: 0,
-            background: "rgba(10,10,15,0.97)",
-            backdropFilter: "blur(20px)",
-            borderBottom: "1px solid var(--border)",
-            padding: "1.5rem clamp(1rem, 5vw, 3rem)",
-            display: "flex",
-            flexDirection: "column",
-            gap: "1.5rem",
+            zIndex: 200,
+            overflow: "hidden",
+            maxHeight: "70vh",
           }}
         >
-          {links.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              className="nav-link"
-              onClick={() => setOpen(false)}
-              style={{ fontSize: "1rem" }}
-            >
-              {l.label}
-            </a>
-          ))}
-          <a
-            href="/cv.pdf"
-            className="btn-primary"
-            style={{ alignSelf: "flex-start" }}
+          {/* 🔥 BACKGROUND LAYER */}
+          <div className="absolute inset-0 bg-[#9810fa19]" />
+
+          {/* overlay biar kontras */}
+          <div className="absolute inset-0 bg-[#210d3a]" />
+
+          {/* glow */}
+          <div className="absolute top-[-30%] left-[-20%] w-62.5 h-62.5 bg-purple-600/20 rounded-full blur-[100px]" />
+          <div className="absolute bottom-[-30%] right-[-20%] w-62.5 h-62.5 bg-blue-600/20 rounded-full blur-[100px]" />
+
+          {/* 🔥 CONTENT LAYER */}
+          <div
+            style={{
+              position: "relative",
+              zIndex: 10,
+              padding: "1.5rem",
+              display: "flex",
+              flexDirection: "column",
+              gap: "1.5rem",
+              backdropFilter: "blur(20px)",
+            }}
           >
-            Download CV
-          </a>
+            {appMenu.map((l) => (
+              <a
+                key={l.href}
+                href={l.href}
+                onClick={() => setOpen(false)}
+                style={{ fontSize: "1.1rem", color: "#fff" }}
+              >
+                {l.label}
+              </a>
+            ))}
+
+            <a href="/cv.pdf" className="btn-primary w-fit">
+              {otherLabel.download}
+            </a>
+          </div>
         </div>
       )}
     </nav>
