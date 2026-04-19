@@ -7,6 +7,7 @@ const iconMap: Record<IconKey, any> = {
   github: GitFork,
   linkedin: Link,
   email: Mail,
+  mapPin: undefined
 };
 
 export default function Hero() {
