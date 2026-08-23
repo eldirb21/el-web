@@ -181,7 +181,7 @@ export default function About() {
                   <span style={{ color: "#e8b86d" }}>name</span>
                   <span style={{ color: "var(--text-muted)" }}>:</span>{" "}
                   <span style={{ color: "#a8d8a8" }}>
-                    &apos;Beladiri Buulolo&apos;
+                    &apos;Eldir Buulolo&apos;
                   </span>
                   <span style={{ color: "var(--text-muted)" }}>,</span>
                 </div>

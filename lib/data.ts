@@ -15,7 +15,7 @@ const roles = [
 
 const profile = {
   status: "Open to Opportunities",
-  name: "Beladiri Buulolo",
+  name: "Eldir Buulolo",
   bio1: "Software Engineer dengan",
   bio2: "5+ tahun pengalaman",
   bio3: "mengembangkan aplikasi mobile & web skala startup hingga enterprise. Spesialis di React Native, dengan fokus pada performa, scalability, dan clean architecture.",
