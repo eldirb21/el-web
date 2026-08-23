@@ -192,6 +192,30 @@ const tools = [
 
 const experiences = [
   {
+    period: "Jul 2026 — Current",
+    role: "Front End Developer",
+    company: "PT Bumi Amartha Teknologi Mandiri",
+    client: "XlSmart",
+    type: "Full-time",
+    description:
+      "Bertanggung jawab dalam pengembangan aplikasi XLSmart yang merupakan aplikasi mobile untuk pengguna Smartfren.",
+    stack: [
+      "React Native",
+      "Redux",
+      "Redux Toolkit",
+      "TypeScript",
+      "DXP base SDK",
+      "Firebase",
+      "Push Notification (FCM)",
+      "Jira",
+    ],
+    highlights: [
+      "Project skala enterprise (XLSmart)",
+      "Kolaborasi team dengan all IT Company",
+      "Penggunaan DXP base SDK",
+    ],
+  },
+  {
     period: "Des 2024 — Okt 2025",
     role: "React Native Developer",
     company: "PT Nityo Infotech",
