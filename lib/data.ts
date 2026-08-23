@@ -7,16 +7,16 @@ const appMenu = [
 ];
 
 const roles = [
-  "Senior React Native Engineer",
+  "Senior React Native Developer",
   "Mobile App Specialist",
-  "Frontend Engineer (React & Next.js)",
+  "Frontend Developer (React & Next.js)",
   "Full-Stack JavaScript Developer",
 ];
 
 const profile = {
   status: "Open to Opportunities",
   name: "Eldir Buulolo",
-  bio1: "Software Engineer dengan",
+  bio1: "Software Developer dengan",
   bio2: "5+ tahun pengalaman",
   bio3: "mengembangkan aplikasi mobile & web skala startup hingga enterprise. Spesialis di React Native, dengan fokus pada performa, scalability, dan clean architecture.",
 };
@@ -27,7 +27,7 @@ const about = {
   titleBold2: "digital products",
   titleBold3: "that",
   titleBold4: "deliver impact.",
-  paragraph1: `Saya adalah Software Engineer dengan latar belakang S1 Sistem Informasi dan pengalaman lebih dari 5 tahun di pengembangan aplikasi mobile dan web. Saya telah terlibat dalam berbagai proyek, mulai dari startup hingga enterprise (termasuk Astra Group).`,
+  paragraph1: `Saya adalah Software Developer dengan latar belakang S1 Sistem Informasi dan pengalaman lebih dari 5 tahun di pengembangan aplikasi mobile dan web. Saya telah terlibat dalam berbagai proyek, mulai dari startup hingga enterprise (termasuk Astra Group).`,
   paragraph2: `Fokus utama saya adalah React Native untuk mobile development, serta Next.js untuk web. Saya juga memiliki pengalaman di backend menggunakan Node.js dan MySQL. Saya percaya bahwa software yang baik bukan hanya berjalan, tetapi scalable, maintainable, dan memberikan impact nyata bagi bisnis.`,
 };
 
@@ -47,7 +47,7 @@ const infoChips: InfoChipsItem[] = [
   { icon: "briefcase", text: "5+ Years Experience" },
   {
     icon: "code2",
-    text: "Mobile Focused Engineer",
+    text: "Mobile Focused Developer",
   },
 ];
 
@@ -143,7 +143,7 @@ const sosmed: SosmedItem[] = [
 
 const skillGroups = [
   {
-    category: "Mobile Engineering",
+    category: "Mobile Developer",
     color: "#4fffb0",
     skills: [
       { name: "React Native", level: 92, years: "5+ yrs" },
